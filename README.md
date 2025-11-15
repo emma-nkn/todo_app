@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📝 To-Do App – Application de gestion de tâches (Flask + MySQL)
 
 Une application web complète permettant de gérer des tâches (CRUD) avec un système d’authentification sécurisé.  
@@ -52,3 +53,7 @@ Développée en **Python (Flask)**, avec **MySQL** pour la base de données et *
 git clone https://github.com/TON_NOM/TON_REPO.git
 cd TON_REPO
 ```
+=======
+# todo_app
+projet pour pratiquer avec Flask et bootstrap
+>>>>>>> 16b777d92f67b5cc116660ccd8cf3cae9442201f
