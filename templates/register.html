@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Inscription{% endblock %} {% block
+content %}
+<div class="card mx-auto" style="max-width: 450px">
+  <div class="card-body">
+    <h3 class="text-center mb-4">Créer un compte</h3>
+
+    <form method="POST">
+      <div class="mb-3">
+        <label class="form-label">Nom d'utilisateur</label>
+        <input type="text" name="username" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Mot de passe</label>
+        <input type="password" name="password" class="form-control" required />
+      </div>
+
+      <button class="btn btn-primary w-100">S'inscrire</button>
+    </form>
+
+    <p class="text-center mt-3">
+      Déjà un compte ? <a href="/login">Connexion</a>
+    </p>
+  </div>
+</div>
+{% endblock %}
