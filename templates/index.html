@@ -1,20 +1,105 @@
 {% extends "base.html" %} {% block title %}Accueil{% endblock %} {% block
 content %}
-<div class="text-center py-5">
-  <h1 class="display-4">Bienvenue dans ta To-Do App 🚀</h1>
-  <p class="lead">Organise tes tâches facilement et efficacement.</p>
 
-  {% if current_user.is_authenticated %}
-  <a href="/tasks" class="btn btn-primary btn-lg mt-3">
-    <i class="fa fa-list-check"></i> Voir mes tâches
-  </a>
-  {% else %}
-  <a href="/login" class="btn btn-success btn-lg mt-3">
-    <i class="fa fa-right-to-bracket"></i> Connexion
-  </a>
-  <a href="/register" class="btn btn-outline-primary btn-lg mt-3">
-    <i class="fa fa-user-plus"></i> Créer un compte
-  </a>
-  {% endif %}
+<!-- SECTION HERO -->
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+  <div class="container-fluid py-5">
+    <h1 class="display-4 fw-bold text-center">
+      Organisez votre journée facilement 🚀
+    </h1>
+    <p class="col-md-10 fs-5 mx-auto mt-3 text-center">
+      Une application simple, rapide et efficace pour gérer vos tâches au
+      quotidien.
+    </p>
+
+    <div class="text-center mt-4">
+      {% if current_user.is_authenticated %}
+      <a href="/tasks" class="btn btn-primary btn-lg px-4">
+        <i class="fa fa-list-check"></i> Voir mes tâches
+      </a>
+      {% else %}
+      <a href="/register" class="btn btn-success btn-lg px-4 me-2">
+        <i class="fa fa-user-plus"></i> Commencer maintenant
+      </a>
+      <a href="/login" class="btn btn-outline-primary btn-lg px-4">
+        <i class="fa fa-right-to-bracket"></i> Connexion
+      </a>
+      {% endif %}
+    </div>
+  </div>
 </div>
+
+<!-- SECTION PRESENTATION -->
+<section class="my-5">
+  <h2 class="text-center fw-bold mb-4">Pourquoi utiliser notre To-Do App ?</h2>
+
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <i class="fa fa-bolt fa-3x text-primary mb-3"></i>
+          <h5 class="card-title fw-bold">Simple et intuitive</h5>
+          <p class="card-text">
+            Ajoutez, modifiez et organisez vos tâches en quelques clics grâce à
+            une interface épurée.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <i class="fa fa-lock fa-3x text-success mb-3"></i>
+          <h5 class="card-title fw-bold">Sécurisée</h5>
+          <p class="card-text">
+            Votre compte et vos données sont protégés grâce à une
+            authentification sécurisée.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm border-0 h-100">
+        <div class="card-body">
+          <i class="fa fa-mobile-screen fa-3x text-warning mb-3"></i>
+          <h5 class="card-title fw-bold">Responsive</h5>
+          <p class="card-text">
+            Utilisez l'application sur ordinateur, tablette ou smartphone sans
+            perte de qualité.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION FONCTIONNALITÉS -->
+<section class="py-5 bg-light rounded-3 shadow-sm">
+  <h2 class="text-center fw-bold mb-4">Fonctionnalités principales</h2>
+
+  <div class="row text-center">
+    <div class="col-md-3 mb-4">
+      <i class="fa fa-plus-circle fa-2x text-primary"></i>
+      <h6 class="fw-bold mt-2">Ajouter des tâches</h6>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <i class="fa fa-pen-to-square fa-2x text-success"></i>
+      <h6 class="fw-bold mt-2">Modifier</h6>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <i class="fa fa-check fa-2x text-warning"></i>
+      <h6 class="fw-bold mt-2">Marquer comme fait</h6>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <i class="fa fa-trash fa-2x text-danger"></i>
+      <h6 class="fw-bold mt-2">Supprimer</h6>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
